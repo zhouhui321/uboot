@@ -62,7 +62,7 @@ lowlevel_init:
 	ldr	r0, =ELFIN_WATCHDOG_BASE	/* 0xE2700000 */
 	mov	r1, #0
 	str	r1, [r0]
-
+#if 0
 	/* SRAM(2MB) init for SMDKC110 */
 	/* GPJ1 SROM_ADDR_16to21 */
 	ldr	r0, =ELFIN_GPIO_BASE
@@ -102,7 +102,7 @@ lowlevel_init:
 	orr	r1, r1, #0x300	
 	orr	r1, r1, #0x1	
 	str	r1, [r0]
-
+#endif 
 	/* when we already run in ram, we don't need to relocate U-Boot.
 	 * and actually, memory controller must be configured before U-Boot
 	 * is running in ram.
@@ -113,10 +113,10 @@ lowlevel_init:
 	bic	r2, r2, r0		/* r0 <- current base addr of code */
 	cmp     r1, r2                  /* compare r0, r1                  */
 	beq     1f			/* r0 == r1 then skip sdram init   */
-
+#if 0
 	/* init PMIC chip */
 	bl PMIC_InitIp
-
+#endif
 	/* init system clock */
 	bl system_clock_init
 
