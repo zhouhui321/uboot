@@ -70,6 +70,7 @@
 //#define FAST_BOOT		1
 
 #define MEMORY_BASE_ADDRESS	0x20000000
+#define MEMORY_BASE_ADDRESS1	0x40000000
 
 /* input clock of PLL */
 #define CONFIG_SYS_CLK_FREQ	24000000	/* the SMDK6400 has 24MHz input clock */
@@ -405,16 +406,16 @@
 
 #if defined(CONFIG_MCP_SINGLE)
 
-#define DMC0_MEMCONFIG_0	0x20E01323	// MemConfig0	256MB config, 8 banks,Mapping Method[12:15]0:linear, 1:linterleaved, 2:Mixed
-#define DMC0_MEMCONFIG_1	0x40F01323	// MemConfig1
+#define DMC0_MEMCONFIG_0	0x20F00313	// MemConfig0	256MB config, 8 banks,Mapping Method[12:15]0:linear, 1:linterleaved, 2:Mixed
+#define DMC0_MEMCONFIG_1	0x00F00313	// MemConfig1
 #define DMC0_TIMINGA_REF	0x00000618	// TimingAref	7.8us*133MHz=1038(0x40E), 100MHz=780(0x30C), 20MHz=156(0x9C), 10MHz=78(0x4E)
 #define DMC0_TIMING_ROW		0x28233287	// TimingRow	for @200MHz
 #define DMC0_TIMING_DATA	0x23240304	// TimingData	CL=3
 #define	DMC0_TIMING_PWR		0x09C80232	// TimingPower
 
 #define	DMC1_MEMCONTROL		0x00202400	// MemControl	BL=4, 2 chip, DDR2 type, dynamic self refresh, force precharge, dynamic power down off
-#define DMC1_MEMCONFIG_0	0x40C01323	// MemConfig0	512MB config, 8 banks,Mapping Method[12:15]0:linear, 1:linterleaved, 2:Mixed
-#define DMC1_MEMCONFIG_1	0x00E01323	// MemConfig1
+#define DMC1_MEMCONFIG_0	0x40F00313	// MemConfig0	512MB config, 8 banks,Mapping Method[12:15]0:linear, 1:linterleaved, 2:Mixed
+#define DMC1_MEMCONFIG_1	0x00F00313	// MemConfig1
 #define DMC1_TIMINGA_REF	0x00000618	// TimingAref	7.8us*133MHz=1038(0x40E), 100MHz=780(0x30C), 20MHz=156(0x9C), 10MHz=78(0x4
 #define DMC1_TIMING_ROW		0x28233289	// TimingRow	for @200MHz
 #define DMC1_TIMING_DATA	0x23240304	// TimingData	CL=3
@@ -466,10 +467,10 @@
 #endif
 
 #define CONFIG_NR_DRAM_BANKS    2          /* we have 2 bank of DRAM */
-#define SDRAM_BANK_SIZE         0x20000000    /* 512 MB */
+#define SDRAM_BANK_SIZE         0x10000000    /* 256 MB */
 #define PHYS_SDRAM_1            MEMORY_BASE_ADDRESS /* SDRAM Bank #1 */
 #define PHYS_SDRAM_1_SIZE       SDRAM_BANK_SIZE
-#define PHYS_SDRAM_2            (MEMORY_BASE_ADDRESS + SDRAM_BANK_SIZE) /* SDRAM Bank #2 */
+#define PHYS_SDRAM_2            (MEMORY_BASE_ADDRESS1) /* SDRAM Bank #2 */
 #define PHYS_SDRAM_2_SIZE       SDRAM_BANK_SIZE
 
 #define CFG_FLASH_BASE		0x80000000
