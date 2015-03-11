@@ -182,117 +182,117 @@ Linker script and memory map
                 0xc3e00640                set_l2cache_auxctrl
                 0xc3e00660                set_l2cache_auxctrl_cycle
  cpu/s5pc11x/s5pc110/cpu_init.o(.text)
- .text          0xc3e006c0      0x414 cpu/s5pc11x/s5pc110/cpu_init.o
+ .text          0xc3e006c0      0x40c cpu/s5pc11x/s5pc110/cpu_init.o
                 0xc3e006c0                mem_ctrl_asm_init
                 0xc3e00a38                cleanDCache
                 0xc3e00a44                cleanFlushDCache
                 0xc3e00a50                cleanFlushCache
  board/samsung/smdkc110/lowlevel_init.o(.text)
- .text          0xc3e00ad4      0x468 board/samsung/smdkc110/lowlevel_init.o
-                0xc3e00ad8                lowlevel_init
+ .text          0xc3e00acc      0x468 board/samsung/smdkc110/lowlevel_init.o
+                0xc3e00ad0                lowlevel_init
  cpu/s5pc11x/onenand_cp.o(.text)
- .text          0xc3e00f3c      0x164 cpu/s5pc11x/onenand_cp.o
-                0xc3e00f3c                onenand_readw
-                0xc3e00f44                onenand_writew
-                0xc3e00f4c                onenand_loadpage
-                0xc3e00fd0                onenand_isbad
-                0xc3e00ff8                onenand_readpage
-                0xc3e01044                onenand_bl2_copy
+ .text          0xc3e00f34      0x164 cpu/s5pc11x/onenand_cp.o
+                0xc3e00f34                onenand_readw
+                0xc3e00f3c                onenand_writew
+                0xc3e00f44                onenand_loadpage
+                0xc3e00fc8                onenand_isbad
+                0xc3e00ff0                onenand_readpage
+                0xc3e0103c                onenand_bl2_copy
  cpu/s5pc11x/nand_cp.o(.text)
- .text          0xc3e010a0      0x180 cpu/s5pc11x/nand_cp.o
-                0xc3e01140                copy_uboot_to_ram
+ .text          0xc3e01098      0x180 cpu/s5pc11x/nand_cp.o
+                0xc3e01138                copy_uboot_to_ram
  cpu/s5pc11x/movi.o(.text)
- .text          0xc3e01220      0x144 cpu/s5pc11x/movi.o
-                0xc3e01220                movi_bl2_copy
-                0xc3e01284                movi_zImage_copy
-                0xc3e012c8                print_movi_bl2_info
-                0xc3e012e0                movi_write_bl1
-                0xc3e01334                movi_write_env
-                0xc3e0134c                movi_read_env
+ .text          0xc3e01218      0x144 cpu/s5pc11x/movi.o
+                0xc3e01218                movi_bl2_copy
+                0xc3e0127c                movi_zImage_copy
+                0xc3e012c0                print_movi_bl2_info
+                0xc3e012d8                movi_write_bl1
+                0xc3e0132c                movi_write_env
+                0xc3e01344                movi_read_env
  common/secure_boot.o(.text)
- .text          0xc3e01364       0xa8 common/secure_boot.o
-                0xc3e01364                Check_Signature
+ .text          0xc3e0135c       0xa8 common/secure_boot.o
+                0xc3e0135c                Check_Signature
  common/ace_sha1.o(.text)
- .text          0xc3e0140c       0xa0 common/ace_sha1.o
-                0xc3e0140c                SHA1_digest
+ .text          0xc3e01404       0xa0 common/ace_sha1.o
+                0xc3e01404                SHA1_digest
  cpu/s5pc11x/pmic.o(.text)
- .text          0xc3e014ac      0x344 cpu/s5pc11x/pmic.o
-                0xc3e014ac                Delay
-                0xc3e014b0                SCLH_SDAH
-                0xc3e014d4                SCLH_SDAL
-                0xc3e014f8                SCLL_SDAH
-                0xc3e0151c                SCLL_SDAL
-                0xc3e01540                IIC_ELow
-                0xc3e01558                IIC_EHigh
-                0xc3e01570                IIC_EStart
-                0xc3e01588                IIC_EEnd
-                0xc3e015a0                IIC_EAck
-                0xc3e01620                IIC_ESetport
-                0xc3e01670                IIC_EWrite
-                0xc3e01714                PMIC_InitIp
+ .text          0xc3e014a4      0x344 cpu/s5pc11x/pmic.o
+                0xc3e014a4                Delay
+                0xc3e014a8                SCLH_SDAH
+                0xc3e014cc                SCLH_SDAL
+                0xc3e014f0                SCLL_SDAH
+                0xc3e01514                SCLL_SDAL
+                0xc3e01538                IIC_ELow
+                0xc3e01550                IIC_EHigh
+                0xc3e01568                IIC_EStart
+                0xc3e01580                IIC_EEnd
+                0xc3e01598                IIC_EAck
+                0xc3e01618                IIC_ESetport
+                0xc3e01668                IIC_EWrite
+                0xc3e0170c                PMIC_InitIp
  *(.text)
- .text          0xc3e017f0      0x47c cpu/s5pc11x/libs5pc11x.a(interrupts.o)
-                0xc3e017f0                enable_interrupts
-                0xc3e017f4                disable_interrupts
-                0xc3e017fc                set_timer
-                0xc3e0180c                reset_timer_masked
-                0xc3e0182c                reset_timer
-                0xc3e01830                get_timer_masked
-                0xc3e01878                get_timer
-                0xc3e0188c                udelay
-                0xc3e018fc                udelay_masked
-                0xc3e0196c                get_ticks
-                0xc3e01980                get_tbclk
-                0xc3e01998                interrupt_init
-                0xc3e01a14                show_regs
-                0xc3e01b54                bad_mode
-                0xc3e01b70                do_irq
-                0xc3e01b94                do_fiq
-                0xc3e01bb8                do_not_used
-                0xc3e01bdc                do_data_abort
-                0xc3e01c00                do_prefetch_abort
-                0xc3e01c24                do_software_interrupt
-                0xc3e01c48                do_undefined_instruction
- .text          0xc3e01c6c      0x1b4 cpu/s5pc11x/libs5pc11x.a(cpu.o)
-                0xc3e01ca8                cpu_init
-                0xc3e01cb0                icache_enable
-                0xc3e01ccc                icache_disable
-                0xc3e01ce8                icache_status
-                0xc3e01cfc                dcache_enable
-                0xc3e01d18                dcache_disable
-                0xc3e01d34                dcache_status
-                0xc3e01d48                branch_enable
-                0xc3e01d64                branch_disable
-                0xc3e01d80                branch_status
-                0xc3e01d94                cpu_mmc_init
-                0xc3e01da8                reset_cpu
-                0xc3e01ddc                do_reset
-                0xc3e01df4                cleanup_before_linux
- .text          0xc3e01e20      0x158 cpu/s5pc11x/libs5pc11x.a(setup_hsmmc.o)
-                0xc3e01e20                setup_hsmmc_cfg_gpio
-                0xc3e01e94                setup_sdhci0_cfg_card
-                0xc3e01ee4                setup_hsmmc_clock
- .text          0xc3e01f78       0xa8 cpu/s5pc11x/libs5pc11x.a(serial.o)
-                0xc3e01f78                serial_setbrg
-                0xc3e01f7c                serial_init
-                0xc3e01f98                serial_tstc
-                0xc3e01fac                serial_putc
-                0xc3e01fdc                serial_puts
-                0xc3e02004                serial_getc
- .text          0xc3e02020      0x43c cpu/s5pc11x/s5pc110/libs5pc110.a(speed.o)
-                0xc3e020a8                get_UCLK
-                0xc3e020b0                get_MPLL_CLK
-                0xc3e020b8                get_FCLK
-                0xc3e020c0                get_SCLKA2M
-                0xc3e020e8                get_HCLKP
-                0xc3e02144                get_PCLKP
-                0xc3e0216c                get_HCLKD
-                0xc3e021c8                get_PCLKD
-                0xc3e021f0                get_HCLK
-                0xc3e02248                get_PCLK
-                0xc3e02270                get_ARMCLK
-                0xc3e02298                print_cpuinfo
- *fill*         0xc3e0245c        0x4 00
+ .text          0xc3e017e8      0x47c cpu/s5pc11x/libs5pc11x.a(interrupts.o)
+                0xc3e017e8                enable_interrupts
+                0xc3e017ec                disable_interrupts
+                0xc3e017f4                set_timer
+                0xc3e01804                reset_timer_masked
+                0xc3e01824                reset_timer
+                0xc3e01828                get_timer_masked
+                0xc3e01870                get_timer
+                0xc3e01884                udelay
+                0xc3e018f4                udelay_masked
+                0xc3e01964                get_ticks
+                0xc3e01978                get_tbclk
+                0xc3e01990                interrupt_init
+                0xc3e01a0c                show_regs
+                0xc3e01b4c                bad_mode
+                0xc3e01b68                do_irq
+                0xc3e01b8c                do_fiq
+                0xc3e01bb0                do_not_used
+                0xc3e01bd4                do_data_abort
+                0xc3e01bf8                do_prefetch_abort
+                0xc3e01c1c                do_software_interrupt
+                0xc3e01c40                do_undefined_instruction
+ .text          0xc3e01c64      0x1b4 cpu/s5pc11x/libs5pc11x.a(cpu.o)
+                0xc3e01ca0                cpu_init
+                0xc3e01ca8                icache_enable
+                0xc3e01cc4                icache_disable
+                0xc3e01ce0                icache_status
+                0xc3e01cf4                dcache_enable
+                0xc3e01d10                dcache_disable
+                0xc3e01d2c                dcache_status
+                0xc3e01d40                branch_enable
+                0xc3e01d5c                branch_disable
+                0xc3e01d78                branch_status
+                0xc3e01d8c                cpu_mmc_init
+                0xc3e01da0                reset_cpu
+                0xc3e01dd4                do_reset
+                0xc3e01dec                cleanup_before_linux
+ .text          0xc3e01e18      0x158 cpu/s5pc11x/libs5pc11x.a(setup_hsmmc.o)
+                0xc3e01e18                setup_hsmmc_cfg_gpio
+                0xc3e01e8c                setup_sdhci0_cfg_card
+                0xc3e01edc                setup_hsmmc_clock
+ .text          0xc3e01f70       0xa8 cpu/s5pc11x/libs5pc11x.a(serial.o)
+                0xc3e01f70                serial_setbrg
+                0xc3e01f74                serial_init
+                0xc3e01f90                serial_tstc
+                0xc3e01fa4                serial_putc
+                0xc3e01fd4                serial_puts
+                0xc3e01ffc                serial_getc
+ .text          0xc3e02018      0x43c cpu/s5pc11x/s5pc110/libs5pc110.a(speed.o)
+                0xc3e020a0                get_UCLK
+                0xc3e020a8                get_MPLL_CLK
+                0xc3e020b0                get_FCLK
+                0xc3e020b8                get_SCLKA2M
+                0xc3e020e0                get_HCLKP
+                0xc3e0213c                get_PCLKP
+                0xc3e02164                get_HCLKD
+                0xc3e021c0                get_PCLKD
+                0xc3e021e8                get_HCLK
+                0xc3e02240                get_PCLK
+                0xc3e02268                get_ARMCLK
+                0xc3e02290                print_cpuinfo
+ *fill*         0xc3e02454        0xc 00
  .text          0xc3e02460      0x140 lib_arm/libarm.a(_divsi3.o)
                 0xc3e02460                __divsi3
  .text          0xc3e025a0       0x98 lib_arm/libarm.a(_udivsi3.o)
@@ -724,7 +724,7 @@ Linker script and memory map
                 0xc3e1e190                cyg_crc16
  .text          0xc3e1e1d8       0xe8 board/samsung/smdkc110/libsmdkc110.a(smdkc110.o)
                 0xc3e1e1d8                board_init
-                0xc3e1e240                dram_init
+                0xc3e1e23c                dram_init
                 0xc3e1e270                board_late_init
                 0xc3e1e278                virt_to_phy_smdkc110
                 0xc3e1e2a8                checkboard
@@ -2221,7 +2221,7 @@ OUTPUT(u-boot elf32-littlearm)
  .note.GNU-stack
                 0x00000000        0x0 lib_generic/libgeneric.a(div64.o)
 
-.debug_line     0x00000000     0xbd5b
+.debug_line     0x00000000     0xbd55
  .debug_line    0x00000000      0x137 cpu/s5pc11x/start.o
  .debug_line    0x00000137      0x124 cpu/s5pc11x/s5pc110/cpu_init.o
  .debug_line    0x0000025b      0x139 board/samsung/smdkc110/lowlevel_init.o
@@ -2296,33 +2296,33 @@ OUTPUT(u-boot elf32-littlearm)
  .debug_line    0x00007e15      0x27f common/libcommon.a(env_auto.o)
  .debug_line    0x00008094       0xa7 common/libcommon.a(gunzip.o)
  .debug_line    0x0000813b       0x9f common/libcommon.a(crc16.o)
- .debug_line    0x000081da       0xe4 board/samsung/smdkc110/libsmdkc110.a(smdkc110.o)
- .debug_line    0x000082be      0x218 board/samsung/smdkc110/libsmdkc110.a(flash.o)
- .debug_line    0x000084d6       0xee lib_generic/libgeneric.a(crc32.o)
- .debug_line    0x000085c4       0x28 lib_generic/libgeneric.a(ctype.o)
- .debug_line    0x000085ec      0x10b lib_generic/libgeneric.a(display_options.o)
- .debug_line    0x000086f7      0x1e0 lib_generic/libgeneric.a(lmb.o)
- .debug_line    0x000088d7      0x19f lib_generic/libgeneric.a(string.o)
- .debug_line    0x00008a76      0x1d3 lib_generic/libgeneric.a(vsprintf.o)
- .debug_line    0x00008c49      0x636 lib_generic/libgeneric.a(zlib.o)
- .debug_line    0x0000927f      0x1b1 cpu/s5pc11x/libs5pc11x.a(usb_ohci.o)
- .debug_line    0x00009430      0x40f cpu/s5pc11x/libs5pc11x.a(nand.o)
- .debug_line    0x0000983f      0x54e cpu/s5pc11x/libs5pc11x.a(usbd-otg-hs.o)
- .debug_line    0x00009d8d      0x611 cpu/s5pc11x/libs5pc11x.a(fastboot.o)
- .debug_line    0x0000a39e      0x134 cpu/s5pc11x/libs5pc11x.a(fimd.o)
- .debug_line    0x0000a4d2       0x40 lib_arm/libarm.a(_ashldi3.o)
- .debug_line    0x0000a512       0x40 lib_arm/libarm.a(_ashrdi3.o)
- .debug_line    0x0000a552       0x66 lib_arm/libarm.a(_umodsi3.o)
- .debug_line    0x0000a5b8      0x1d9 lib_arm/libarm.a(bootm.o)
- .debug_line    0x0000a791       0x38 lib_arm/libarm.a(cache.o)
- .debug_line    0x0000a7c9      0x4a8 fs/fat/libfat.a(fat.o)
- .debug_line    0x0000ac71      0x8a4 fs/ext2/libext2fs.a(ext2fs.o)
- .debug_line    0x0000b515      0x119 fs/ext2/libext2fs.a(dev.o)
- .debug_line    0x0000b62e      0x163 disk/libdisk.a(part.o)
- .debug_line    0x0000b791      0x14f disk/libdisk.a(part_dos.o)
- .debug_line    0x0000b8e0      0x319 drivers/mtd/nand/libnand.a(nand_util.o)
- .debug_line    0x0000bbf9       0xab drivers/rtc/librtc.a(date.o)
- .debug_line    0x0000bca4       0xb7 lib_generic/libgeneric.a(div64.o)
+ .debug_line    0x000081da       0xde board/samsung/smdkc110/libsmdkc110.a(smdkc110.o)
+ .debug_line    0x000082b8      0x218 board/samsung/smdkc110/libsmdkc110.a(flash.o)
+ .debug_line    0x000084d0       0xee lib_generic/libgeneric.a(crc32.o)
+ .debug_line    0x000085be       0x28 lib_generic/libgeneric.a(ctype.o)
+ .debug_line    0x000085e6      0x10b lib_generic/libgeneric.a(display_options.o)
+ .debug_line    0x000086f1      0x1e0 lib_generic/libgeneric.a(lmb.o)
+ .debug_line    0x000088d1      0x19f lib_generic/libgeneric.a(string.o)
+ .debug_line    0x00008a70      0x1d3 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_line    0x00008c43      0x636 lib_generic/libgeneric.a(zlib.o)
+ .debug_line    0x00009279      0x1b1 cpu/s5pc11x/libs5pc11x.a(usb_ohci.o)
+ .debug_line    0x0000942a      0x40f cpu/s5pc11x/libs5pc11x.a(nand.o)
+ .debug_line    0x00009839      0x54e cpu/s5pc11x/libs5pc11x.a(usbd-otg-hs.o)
+ .debug_line    0x00009d87      0x611 cpu/s5pc11x/libs5pc11x.a(fastboot.o)
+ .debug_line    0x0000a398      0x134 cpu/s5pc11x/libs5pc11x.a(fimd.o)
+ .debug_line    0x0000a4cc       0x40 lib_arm/libarm.a(_ashldi3.o)
+ .debug_line    0x0000a50c       0x40 lib_arm/libarm.a(_ashrdi3.o)
+ .debug_line    0x0000a54c       0x66 lib_arm/libarm.a(_umodsi3.o)
+ .debug_line    0x0000a5b2      0x1d9 lib_arm/libarm.a(bootm.o)
+ .debug_line    0x0000a78b       0x38 lib_arm/libarm.a(cache.o)
+ .debug_line    0x0000a7c3      0x4a8 fs/fat/libfat.a(fat.o)
+ .debug_line    0x0000ac6b      0x8a4 fs/ext2/libext2fs.a(ext2fs.o)
+ .debug_line    0x0000b50f      0x119 fs/ext2/libext2fs.a(dev.o)
+ .debug_line    0x0000b628      0x163 disk/libdisk.a(part.o)
+ .debug_line    0x0000b78b      0x14f disk/libdisk.a(part_dos.o)
+ .debug_line    0x0000b8da      0x319 drivers/mtd/nand/libnand.a(nand_util.o)
+ .debug_line    0x0000bbf3       0xab drivers/rtc/librtc.a(date.o)
+ .debug_line    0x0000bc9e       0xb7 lib_generic/libgeneric.a(div64.o)
 
 .debug_info     0x00000000    0x34c85
  .debug_info    0x00000000       0x55 cpu/s5pc11x/start.o

@@ -65,6 +65,18 @@ static inline void delay(unsigned long loops)
 static void dm9000_pre_init(void)
 {
 	unsigned int tmp;
+	/* DM9000 on SROM BANK1, 16 bit */
+	SROM_BW_REG &= ~(0xf << 4);
+	SROM_BW_REG |= (0x3 << 4);
+	SROM_BC1_REG = ((0<<28)|(0<<24)|(5<<16)|(0<<12)|(0<<8)|(0<<4)|(0<<0));
+	/* Set MP01_1 as SROM_CSn[1] */
+	tmp = MP01CON_REG;
+	tmp &=~(0xf<<4);
+	tmp |=(2<<4);
+	MP01CON_REG = tmp;
+
+#if 0
+	unsigned int tmp;
 
 #if defined(DM9000_16BIT_DATA)
 	SROM_BW_REG &= ~(0xf << 20);
@@ -80,6 +92,7 @@ static void dm9000_pre_init(void)
 	tmp &=~(0xf<<20);
 	tmp |=(2<<20);
 	MP01CON_REG = tmp;
+#endif
 }
 
 
