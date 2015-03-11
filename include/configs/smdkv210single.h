@@ -142,7 +142,7 @@
  * select serial console configuration
  */
 
-#define CONFIG_SERIAL3          1	/* we use UART1 on SMDKC110 */
+#define CONFIG_SERIAL1          1	/* we use UART1 on SMDKC110 */
 
 #define CFG_HUSH_PARSER			/* use "hush" command parser	*/
 #ifdef CFG_HUSH_PARSER
